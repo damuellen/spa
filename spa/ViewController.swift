@@ -67,26 +67,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   
   func updateUILabels(result: SolarPosition.OutputValues) {
     
-    let sunriseMin = 60 * (result.sunrise - Double(Int(result.sunrise)))
-    let sunriseSec = 60 * (sunriseMin - Double(Int(sunriseMin)))
-    let sunsetMin = 60 * (result.sunset - Double(Int(result.sunset)))
-    let sunsetSec = 60 * (sunsetMin - Double(Int(sunsetMin)))
-    let suntransitMin = 60 * (result.suntransit - Double(Int(result.suntransit)))
-    let suntransitSec = 60 * (suntransitMin - Double(Int(suntransitMin)))
+    self.sunrise.text     = result.sunrise.convertFractionalTime()
+    self.sunset.text      = result.sunset.convertFractionalTime()
+    self.suntransit.text  = result.suntransit.convertFractionalTime()
     
-    self.sunrise.text = "\(Int(result.sunrise)) : \(Int(sunriseMin)) : \(Int(sunriseSec))"
-    self.sunset.text = "\(Int(result.sunset)) : \(Int(sunsetMin)) : \(Int(sunsetSec))"
-    self.suntransit.text = "\(Int(result.suntransit)) : \(Int(suntransitMin)) : \(Int(suntransitSec))"
-    
-    self.zenithLabel.text   = String(format: "%.3f", arguments: [result.zenith]) + " deg"
-    self.azimuth180.text    = String(format: "%.3f", arguments: [result.azimuth180]) + " deg"
-    self.azimuth.text       = String(format: "%.3f", arguments: [result.azimuth]) + " deg"
-    self.incidence.text     = String(format: "%.3f", arguments: [result.incidence]) + " deg"
+    self.zenithLabel.text   = result.zenith.convertDegrees()
+    self.azimuth180.text    = result.azimuth180.convertDegrees()
+    self.azimuth.text       = result.azimuth.convertDegrees()
+    self.incidence.text     = result.incidence.convertDegrees()
   }
   
   func updateUILabels(location: SolarPosition.Location) {
-    self.longitudeLabel.text  = String(format: "%.3f", arguments: [location.longitude]) + " deg"
-    self.latitudeLabel.text   = String(format: "%.3f", arguments: [location.latitude]) + " deg"
+    self.longitudeLabel.text  = location.longitude.convertDegrees()
+    self.latitudeLabel.text   = location.latitude.convertDegrees()
     self.altitudeLabel.text   = String(format: "%.1f", arguments: [location.elevation]) + " m"
   }
   

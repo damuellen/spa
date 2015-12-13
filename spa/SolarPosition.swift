@@ -8,6 +8,24 @@
 
 import Foundation
 
+typealias FractionalTime = Double
+
+extension FractionalTime {
+  func convertFractionalTime() -> String {
+    let min = 60 * (self - Double(Int(self)))
+    let sec = 60 * (min - Double(Int(min)))
+    return "\(Int(self)):\(Int(min)):\(Int(sec))"
+  }
+}
+
+typealias Degrees = Double
+
+extension Degrees {
+  func convertDegrees() -> String {
+    return String(format: "%.3f", arguments: [self]) + " deg"
+  }
+}
+
 public final class SolarPosition {
 
   struct InputValues {
@@ -30,13 +48,13 @@ public final class SolarPosition {
   }
   
   struct OutputValues {
-    var zenith: Double
-    var azimuth180: Double
-    var azimuth: Double
-    var incidence: Double
-    var suntransit: Double
-    var sunrise: Double
-    var sunset: Double
+    var zenith: Degrees
+    var azimuth180: Degrees
+    var azimuth: Degrees
+    var incidence: Degrees
+    var suntransit: FractionalTime
+    var sunrise: FractionalTime
+    var sunset: FractionalTime
   }
   
   struct Location {
@@ -55,7 +73,7 @@ public final class SolarPosition {
   
   static func calculate(date: NSDate, location: Location, calculate: Output) -> OutputValues {
     let timeZone = Double(NSTimeZone.localTimeZone().secondsFromGMT) / 3600
-    let values = InputValues(year: date.year, month: date.month, day: date.day, hour: date.hours, minute: date.minutes, second: date.seconds, timezone: timeZone, delta_t: 0, longitude: location.longitude, latitude: location.latitude, elevation: location.elevation, pressure: 1000, temperature: 20, slope: 30, azm_rotation: -10, atmos_refract: 0.5)
+    let values = InputValues(year: date.year, month: date.month, day: date.day, hour: date.hours, minute: date.minutes, second: date.seconds, timezone: timeZone, delta_t: 0, longitude: location.longitude, latitude: location.latitude, elevation: location.elevation, pressure: 1000, temperature: 20, slope: 30, azm_rotation: -10, atmos_refract: 0.5667)
     
     return SolarPosition.calculate(values, calculate: calculate)
   }

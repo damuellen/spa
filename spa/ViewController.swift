@@ -50,6 +50,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     timer = Timer.scheduledTimer(1, repeats: true) { _ in
     let date = NSDate()
       self.calculateSunPosition(date)
+      self.datePicker.date = date
     }
   }
   

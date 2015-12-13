@@ -71,15 +71,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let sunriseSec = 60 * (sunriseMin - Double(Int(sunriseMin)))
     let sunsetMin = 60 * (result.sunset - Double(Int(result.sunset)))
     let sunsetSec = 60 * (sunsetMin - Double(Int(sunsetMin)))
+    let suntransitMin = 60 * (result.suntransit - Double(Int(result.suntransit)))
+    let suntransitSec = 60 * (suntransitMin - Double(Int(suntransitMin)))
     
     self.sunrise.text = "\(Int(result.sunrise)) : \(Int(sunriseMin)) : \(Int(sunriseSec))"
     self.sunset.text = "\(Int(result.sunset)) : \(Int(sunsetMin)) : \(Int(sunsetSec))"
+    self.suntransit.text = "\(Int(result.suntransit)) : \(Int(suntransitMin)) : \(Int(suntransitSec))"
     
     self.zenithLabel.text   = String(format: "%.3f", arguments: [result.zenith]) + " deg"
     self.azimuth180.text    = String(format: "%.3f", arguments: [result.azimuth180]) + " deg"
     self.azimuth.text       = String(format: "%.3f", arguments: [result.azimuth]) + " deg"
     self.incidence.text     = String(format: "%.3f", arguments: [result.incidence]) + " deg"
-    self.suntransit.text    = String(format: "%.3f", arguments: [result.suntransit]) + " deg"
   }
   
   func updateUILabels(location: SolarPosition.Location) {

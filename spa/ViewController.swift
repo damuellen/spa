@@ -30,24 +30,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   var latitude: CLLocationDegrees?
   var longitude: CLLocationDegrees?
   
+  var timer: NSTimer?
+  
   func initLocationManager() {
     self.locationManager.delegate = self
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
     self.locationManager.requestWhenInUseAuthorization()
     self.locationManager.requestLocation()
   }
   
   @IBAction func dateChanged(sender: UIDatePicker) {
-    calculateSunPosition()
+    let date = self.datePicker.date
+    calculateSunPosition(date)
+    timer?.invalidate()
   }
   
-  func calculateSunPosition() {
+  @IBAction func refresh(sender: AnyObject) {
+    timer?.invalidate()
+    timer = Timer.scheduledTimer(1, repeats: true) { _ in
+    let date = NSDate()
+      self.calculateSunPosition(date)
+    }
+  }
+  
+  func calculateSunPosition(date: NSDate) {
     let location = SolarPosition.Location(
       longitude: self.longitude ?? 7,
       latitude:  self.latitude  ?? 51,
       elevation: self.altitude  ?? 50)
-    
-    let date = self.datePicker.date
 
     let result = SolarPosition.calculate(date, location: location, calculate: .ALL)
     
@@ -88,7 +98,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     altitude = locations.last?.altitude
     latitude = locations.last?.coordinate.latitude
     longitude = locations.last?.coordinate.longitude
-    self.calculateSunPosition()
+    self.calculateSunPosition(NSDate())
   }
   
   func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

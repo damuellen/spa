@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65074F431C1E17D500127C43 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65074F421C1E17D500127C43 /* Timer.swift */; };
 		6588A1A21C1CF4F600341A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588A1A11C1CF4F600341A53 /* AppDelegate.swift */; };
 		6588A1A41C1CF4F600341A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588A1A31C1CF4F600341A53 /* ViewController.swift */; };
 		6588A1A71C1CF4F600341A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6588A1A51C1CF4F600341A53 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65074F421C1E17D500127C43 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		6588A19E1C1CF4F600341A53 /* spa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6588A1A11C1CF4F600341A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6588A1A31C1CF4F600341A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				6588A1B51C1CF52500341A53 /* Dependencies */,
 				6588A1A11C1CF4F600341A53 /* AppDelegate.swift */,
 				6588A1A31C1CF4F600341A53 /* ViewController.swift */,
+				65074F421C1E17D500127C43 /* Timer.swift */,
 				6588A1A51C1CF4F600341A53 /* Main.storyboard */,
 				6588A1A81C1CF4F600341A53 /* Assets.xcassets */,
 				6588A1AA1C1CF4F600341A53 /* LaunchScreen.storyboard */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6588A1BD1C1CF55B00341A53 /* SolarPosition.swift in Sources */,
+				65074F431C1E17D500127C43 /* Timer.swift in Sources */,
 				6588A1C21C1D194D00341A53 /* Extensions.swift in Sources */,
 				6588A1BB1C1CF52500341A53 /* spa.c in Sources */,
 				6588A1C11C1D194D00341A53 /* UIView+UIColor.swift in Sources */,
@@ -319,12 +323,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				CLANG_ENABLE_MODULES = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = spa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.damuellen.spa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "spa-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};

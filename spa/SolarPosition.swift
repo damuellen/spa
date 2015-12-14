@@ -73,7 +73,8 @@ public final class SolarPosition {
   
   static func calculate(date: NSDate, location: Location, calculate: Output) -> OutputValues {
     let timeZone = Double(NSTimeZone.localTimeZone().secondsFromGMT) / 3600
-    let ΔT = 62.92 + 0.32217 * (date.year - 2000) + 0.005589 * pow((date.year - 2000),2)
+    var ΔT = 62.92 + 0.32217 * (Double(date.year) - 2000)
+    ΔT += 0.005589 * pow((Double(date.year) - 2000),2)
     let values = InputValues(year: date.year, month: date.month, day: date.day, hour: date.hours, minute: date.minutes, second: date.seconds, timezone: timeZone, delta_t: ΔT, longitude: location.longitude, latitude: location.latitude, elevation: location.elevation, pressure: 1000, temperature: 20, slope: 0, azm_rotation: 0, atmos_refract: 0.5667)
     
     return SolarPosition.calculate(values, calculate: calculate)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="snE-qT-E8b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="snE-qT-E8b">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,150 +18,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sya-Mj-I95">
-                                <rect key="frame" x="20" y="72" width="118" height="299"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mKw-yt-Pea">
+                                <rect key="frame" x="459" y="72" width="121" height="294"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zenith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-Ly-rlB">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tracking" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-vn-ik1">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth180" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-oB-PgR">
-                                        <rect key="frame" x="0.0" y="30" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjR-w0-bNw">
-                                        <rect key="frame" x="0.0" y="60" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="incidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UE-gc-CVK">
-                                        <rect key="frame" x="0.0" y="90" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suntransit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V2-LD-98L">
-                                        <rect key="frame" x="0.0" y="120" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-TU-adZ">
-                                        <rect key="frame" x="0.0" y="150" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUL-2Z-8WC">
-                                        <rect key="frame" x="0.0" y="180" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-eR-eGL">
-                                        <rect key="frame" x="0.0" y="210" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3po-Et-DC7">
-                                        <rect key="frame" x="0.0" y="240" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="altitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs8-ae-nJA">
-                                        <rect key="frame" x="0.0" y="270" width="118" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mKw-yt-Pea">
-                                <rect key="frame" x="435" y="72" width="139" height="297"/>
-                                <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zenith" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSF-QY-c5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                        <rect key="frame" x="0.0" y="27" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azimuth180" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6df-d9-UIW">
-                                        <rect key="frame" x="0.0" y="30" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth180" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6df-d9-UIW">
+                                        <rect key="frame" x="0.0" y="54" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azimuth" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-Iv-M2E">
-                                        <rect key="frame" x="0.0" y="60" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-Iv-M2E">
+                                        <rect key="frame" x="0.0" y="81" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="incidence" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-Od-Fyh">
-                                        <rect key="frame" x="0.0" y="90" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="incidence" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-Od-Fyh">
+                                        <rect key="frame" x="0.0" y="108" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="suntransit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWr-GE-X4O">
-                                        <rect key="frame" x="0.0" y="120" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunrise" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-fJ-wv3">
+                                        <rect key="frame" x="0.0" y="135" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="sunrise" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-fJ-wv3">
-                                        <rect key="frame" x="0.0" y="150" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suntransit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWr-GE-X4O">
+                                        <rect key="frame" x="0.0" y="162" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuM-Ds-5R4">
-                                        <rect key="frame" x="0.0" y="180" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuM-Ds-5R4">
+                                        <rect key="frame" x="0.0" y="189" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="longitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFz-Ok-IoX">
-                                        <rect key="frame" x="0.0" y="210" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="longitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFz-Ok-IoX">
+                                        <rect key="frame" x="0.0" y="216" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="latitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-dk-BTD">
-                                        <rect key="frame" x="0.0" y="240" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-dk-BTD">
+                                        <rect key="frame" x="0.0" y="243" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="altitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMt-H8-wgX">
-                                        <rect key="frame" x="0.0" y="270" width="139" height="27"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="altitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMt-H8-wgX">
+                                        <rect key="frame" x="0.0" y="270" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -178,6 +110,88 @@
                                     <action selector="dateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DC0-9T-jOf"/>
                                 </connections>
                             </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sya-Mj-I95">
+                                <rect key="frame" x="20" y="72" width="104" height="296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uU-JG-tcE">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zenith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-Ly-rlB">
+                                        <rect key="frame" x="0.0" y="27" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth180" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-oB-PgR">
+                                        <rect key="frame" x="0.0" y="54" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azimuth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjR-w0-bNw">
+                                        <rect key="frame" x="0.0" y="81" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="incidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UE-gc-CVK">
+                                        <rect key="frame" x="0.0" y="108" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-TU-adZ">
+                                        <rect key="frame" x="0.0" y="135" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suntransit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V2-LD-98L">
+                                        <rect key="frame" x="0.0" y="162" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUL-2Z-8WC">
+                                        <rect key="frame" x="0.0" y="189" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-eR-eGL">
+                                        <rect key="frame" x="0.0" y="216" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3po-Et-DC7">
+                                        <rect key="frame" x="0.0" y="243" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="altitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs8-ae-nJA">
+                                        <rect key="frame" x="0.0" y="270" width="104" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -215,6 +229,7 @@
                         <outlet property="sunrise" destination="JbV-fJ-wv3" id="vf9-Xr-ntd"/>
                         <outlet property="sunset" destination="ZuM-Ds-5R4" id="h60-6P-f95"/>
                         <outlet property="suntransit" destination="QWr-GE-X4O" id="7XU-BP-Qwo"/>
+                        <outlet property="trackingLabel" destination="WC1-vn-ik1" id="MVC-kU-Rwn"/>
                         <outlet property="zenithLabel" destination="gSF-QY-c5f" id="rvW-vC-Sgh"/>
                     </connections>
                 </viewController>

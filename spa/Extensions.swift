@@ -8,6 +8,12 @@
 
 import Foundation
 
+infix operator ** { associativity left precedence 170 }
+
+func ** (num: Double, power: Double) -> Double{
+  return pow(num, power)
+}
+
 extension NSData {
   public var stringValue: String {
     return NSString(data: self, encoding: NSUTF8StringEncoding)! as String
@@ -152,37 +158,6 @@ public extension NSDate {
   
   public func add(seconds seconds: Int = 0, minutes: Int = 0, hours: Int = 0, days: Int = 0, weeks: Int = 0, months: Int = 0, years: Int = 0) -> NSDate {
     let calendar = NSCalendar.currentCalendar()
-    let version = floor(NSFoundationVersionNumber)
-    
-    if version <= NSFoundationVersionNumber10_9_2 {
-      var component = NSDateComponents()
-      component.setValue(seconds, forComponent: .Second)
-      var date : NSDate! = calendar.dateByAddingComponents(component, toDate: self, options: [])!
-      component = NSDateComponents()
-      component.setValue(minutes, forComponent: .Minute)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      
-      component = NSDateComponents()
-      component.setValue(hours, forComponent: .Hour)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      
-      component = NSDateComponents()
-      component.setValue(days, forComponent: .Day)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      
-      component = NSDateComponents()
-      component.setValue(weeks, forComponent: .WeekOfMonth)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      
-      component = NSDateComponents()
-      component.setValue(months, forComponent: .Month)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      
-      component = NSDateComponents()
-      component.setValue(years, forComponent: .Year)
-      date = calendar.dateByAddingComponents(component, toDate: date, options: [])!
-      return date
-    }
     let options = NSCalendarOptions(rawValue: 0)
     var date : NSDate! = calendar.dateByAddingUnit(NSCalendarUnit.Second, value: seconds, toDate: self, options: options)
     date = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: minutes, toDate: date, options: options)

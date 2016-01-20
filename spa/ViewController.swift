@@ -13,6 +13,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
   @IBOutlet weak var datePicker: UIDatePicker!
   
+  @IBOutlet weak var trackingLabel: UILabel!
+  
   @IBOutlet weak var zenithLabel: UILabel!
   @IBOutlet weak var azimuth180: UILabel!
   @IBOutlet weak var azimuth: UILabel!
@@ -57,37 +59,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   func calculateSunPosition(date: NSDate) {
     let location = SolarPosition.Location(
       longitude: self.longitude ?? 7,
-      latitude:  self.latitude  ?? 51,
-      elevation: self.altitude  ?? 50)
+      latitude:  self.latitude ?? 51,
+      elevation: self.altitude ?? 50)
 
     let result = SolarPosition.calculate(date, location: location, calculate: .ALL)
     
-    updateUILabels(result)
-    updateUILabels(location)
+    let t = SolarPosition.trackingAngle(azimuth: result.azimuth, zenith: result.elevation)
+    
+    self.trackingLabel.text = t.stringValue
+    refreshUILabels(result, location)
   }
   
-  func updateUILabels(result: SolarPosition.OutputValues) {
+  func refreshUILabels(result: SolarPosition.OutputValues, _ location: SolarPosition.Location) {
     
-    self.sunrise.text     = result.sunrise.convertFractionalTime()
-    self.sunset.text      = result.sunset.convertFractionalTime()
-    self.suntransit.text  = result.suntransit.convertFractionalTime()
+    self.sunrise.text        = result.sunrise.fractionalTime
+    self.sunset.text         = result.sunset.fractionalTime
+    self.suntransit.text     = result.suntransit.fractionalTime
     
-    self.zenithLabel.text   = result.zenith.convertDegrees()
-    self.azimuth180.text    = result.azimuth180.convertDegrees()
-    self.azimuth.text       = result.azimuth.convertDegrees()
-    self.incidence.text     = result.incidence.convertDegrees()
+    self.zenithLabel.text    = result.zenith.stringValue
+    self.azimuth180.text     = result.azimuth180.stringValue
+    self.azimuth.text        = result.azimuth.stringValue
+    self.incidence.text      = result.incidence.stringValue
+    
+    self.longitudeLabel.text = location.longitude.stringValue
+    self.latitudeLabel.text  = location.latitude.stringValue
+    self.altitudeLabel.text  = String(format: "%.1f", arguments: [location.elevation]) + " m"
   }
   
-  func updateUILabels(location: SolarPosition.Location) {
-    self.longitudeLabel.text  = location.longitude.convertDegrees()
-    self.latitudeLabel.text   = location.latitude.convertDegrees()
-    self.altitudeLabel.text   = String(format: "%.1f", arguments: [location.elevation]) + " m"
-  }
   
   override func viewDidLoad() {
     self.view.addOrChangeGradientLayerWithColors(UIColor.fieryOrange())
     super.viewDidLoad()
     initLocationManager()
+    
   }
 
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
